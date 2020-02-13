@@ -4,7 +4,7 @@ from machine.plugins.decorators import listen_to, schedule
 
 
 class DinnerPlugin(MachineBasePlugin):
-    @schedule(hour='19')
+    @schedule(hour='19', day_of_week='1-6')
     def ask(self):
         candidates = [
             '뱁 드실분?',
